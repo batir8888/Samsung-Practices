@@ -4,11 +4,10 @@ import IFly
 import ISwim
 import java.awt.Color
 
-open class Car (
+open class Car(
     private var color: Color,
     val gosNomer: Int,
-    private val model: String,
-    override var countFlying: Int
+    private val model: String
 ): IFly, ISwim{
     companion object{
         var count:Int = 0 // статичная переменная
