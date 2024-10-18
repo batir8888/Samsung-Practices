@@ -55,4 +55,5 @@ fun main(){
 //    Arrays.sort(arrayCars, customComparator)
 //
 //    println(arrayCars.contentToString())
+    println("Пока")
 }
