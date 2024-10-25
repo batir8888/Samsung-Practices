@@ -11,21 +11,21 @@ class Robot(health: Float,
         if (this.battery >= 10)
         {
             val damage = this.power * log((1 + this.battery * 10).toDouble(), 25.0).toFloat()
-            println("Робот атакует и наносит $damage урона!")
+            println("Робот атакует ${enemy.toString()} и наносит $damage урона!")
             enemy.takeDamage(damage)
             this.battery -= 10
         }
         else
         {
             val damage = this.power
-            println("Робот атакует и наносит $damage урона!")
+            println("Робот атакует ${enemy.toString()} и наносит $damage урона!")
             enemy.takeDamage(damage)
         }
     }
 
     override fun heal() {
         if (this.battery >= 5){
-            val healAmount = this.battery * Random.nextFloat() / 5
+            val healAmount = this.battery * Random.nextFloat() / 10
             this.health += healAmount
             println("Робот восстанавливает $healAmount здоровья!")
         }

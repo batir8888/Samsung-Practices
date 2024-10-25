@@ -10,14 +10,14 @@ class Wizard(health:Float,
         if (this.mana >= 20)
         {
             val damage = this.power + this.power * Random.nextFloat()
-            println("Маг атакует и наносит $damage урона!")
+            println("Маг атакует ${enemy.toString()} и наносит $damage урона!")
             enemy.takeDamage(damage)
             this.mana -= 20
         }
         else
         {
             val damage = this.power * Random.nextFloat()
-            println("Маг атакует и наносит $damage урона!")
+            println("Маг атакует ${enemy.toString()} и наносит $damage урона!")
             enemy.takeDamage(damage)
         }
     }

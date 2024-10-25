@@ -8,7 +8,7 @@ class Knight(health: Float,
 ) : Human(health, power), IDamageable {
     override fun attack(enemy: IDamageable) {
         val damage = this.power + Random.nextInt(0, this.armor.toInt())
-        println("Рыцарь атакует и наносит $damage урона!")
+        println("Рыцарь атакует ${enemy.toString()} и наносит $damage урона!")
         enemy.takeDamage(damage)
     }
 

@@ -38,6 +38,10 @@ open class Car(
         return "Car(gosNomer=$gosNomer)"
     }
 
+    override var countFlying: Int
+        get() = TODO("Not yet implemented")
+        set(value) {}
+
     override fun fly() {
         super.fly()
         // научил машину летать
